@@ -18,6 +18,7 @@
     });
   };
 
+
   (function(d, s, id){
    var js, fjs = d.getElementsByTagName(s)[0];
    if (d.getElementById(id)) {return;}
@@ -26,8 +27,12 @@
    fjs.parentNode.insertBefore(js, fjs);
  }(document, 'script', 'facebook-jssdk'));
   </script>
+  
   <div class="panel">
-    <div class="panel-heading">Hello world</div>
+    <div class="panel-heading">Hello world
+      <div class="fb-login-button pull-right" data-max-rows="1" data-size="medium" data-auto-logout-link="true"></div>  
+    </div>
+    
     <div class="panel-body">We will change the world</div>
 
   </div>

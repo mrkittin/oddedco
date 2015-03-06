@@ -1,3 +1,3 @@
-var f = 1;
+$().ready(function () {
 
-var g = 1;
+});
