@@ -1,5 +1,5 @@
 $().ready(function () {
-  debugger;
+  // debugger;
   var loadAllTemplates = function () {
     $.get('/rest/templates', function (templates) {
       window.CTWTemplates = templates;
