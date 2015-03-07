@@ -24,6 +24,10 @@ module.exports = function(grunt) {
             all: {
                 files: ["src/js/**/*.js", "src/**/*.html"],
                 tasks: ['copy:main']
+            },
+            server: {
+              files: ["server/**/*.*"],
+              tasks: ['copy:server']
             }
         },
 
@@ -43,7 +47,7 @@ module.exports = function(grunt) {
             server : {
                 expand : true,
                 cwd : 'server/',
-                src : [ '**/*.*s'],
+                src : [ '**/*.js'],
                 dest : 'target/'
             },
             jquery : {
