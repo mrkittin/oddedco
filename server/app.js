@@ -31,9 +31,7 @@ function readTemplates(dir) {
   var nodeDir = require('node-dir');
   nodeDir.files(dir, function (err, files) {
     if (err) throw err;
-    console.log(files);
     files.forEach(function (file) {
-      console.log(file);
       var fileName = path.basename(file);
       var dir = path.dirname(path.normalize(file));
       dir = dir.replace(baseTemplatesPath + '/', '');
@@ -45,7 +43,6 @@ function readTemplates(dir) {
           name: dir + '/' + fileName,
           data: data
         });
-        console.log(templateFiles);
       });
     });
 

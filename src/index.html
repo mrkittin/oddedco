@@ -7,7 +7,12 @@
     <script src="js/lib/dot.js"></script>
     <script src="js/lib/jquery.js"></script>
   <script src="js/lib/bootstrap.js"></script>
-  <script src="js/startup.js"></script>
+  <script src="js/lib/angular.js"></script>
+  <script src="js/lib/angular-route.js"></script>
+    <script src="js/startup.js"></script>
+    <script src="js/controllers/LandingController.js"></script>
+  <script src="js/controllers/ProjectController.js"></script>
+  <script src="js/controllers/ProjectListController.js"></script>
 </head>
 <body>
   <script>
@@ -29,14 +34,40 @@
    fjs.parentNode.insertBefore(js, fjs);
  }(document, 'script', 'facebook-jssdk'));
   </script>
-  
-  <div class="panel">
-    <div class="panel-heading">Hello world
-      <div class="fb-login-button pull-right" data-max-rows="1" data-size="medium" data-auto-logout-link="true"></div>  
-    </div>
-    
-    <div class="panel-body">We will change the world</div>
 
+
+  <div ng-app="ctw">
+
+      <header>
+          <nav class="navbar navbar-default">
+              <div class="container">
+                  <div class="navbar-header">
+                      <a class="navbar-brand" href="/">Change the world</a>
+                  </div>
+
+                  <ul class="nav navbar-nav navbar-right">
+                      <li><a href="/projects"><i class="fa fa-shield"></i> Projects</a></li>
+                      <li><a href="/project/1"><i class="fa fa-comment"></i> First Project</a></li>
+                      <li><a href="/contact"><i class="fa fa-comment"></i> Contact</a></li>
+                  </ul>
+              </div>
+          </nav>
+      </header>
+
+      <div ng-view></div>
+
+      <footer>
+          <nav class="navbar navbar-default">
+              <div class="container">
+                  <ul class="nav navbar-nav navbar-right">
+                      <li><a href="/projects"><i class="fa fa-shield"></i> Projects</a></li>
+                      <li><a href="/project/1"><i class="fa fa-comment"></i> First Project</a></li>
+                      <li><a href="/contact"><i class="fa fa-comment"></i> Contact</a></li>
+                  </ul>
+              </div>
+          </nav>
+      </footer>
   </div>
+
 </body>
 </html>
