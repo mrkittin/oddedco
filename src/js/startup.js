@@ -13,6 +13,10 @@ angular.module("ctw", ['ngRoute']).config(['$routeProvider', '$locationProvider'
         templateUrl: '/templates/projectList.html',
         controller: 'ProjectListController'
       }).
+      when('/about', {
+        templateUrl: '/templates/about.html',
+        controller: 'AboutController'
+      }).
       otherwise({
         redirectTo: '/'
       });
