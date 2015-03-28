@@ -1,4 +1,4 @@
-angular.module("ctw").controller("ProjectController", function($scope) {
+angular.module("ctw").controller("ProjectController", function($scope, $resource) {
   var response = {
     projectTitle: 'Title',
     projectAuthor: 'Author',
@@ -27,5 +27,6 @@ angular.module("ctw").controller("ProjectController", function($scope) {
       }
     ]
   };
+
   $scope.data = response;
 });

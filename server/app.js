@@ -12,19 +12,45 @@ app.get('/', function (req, res) {
 var port = 3003;
 app.use(serveStatic('target/', {'index': 'index.html'}));
 
-var templateFiles = [];
 var baseTemplatesPath = __dirname + '/templates';
-readTemplates(baseTemplatesPath);
 
-app.get('/rest/templates', function (req, res) {
-  res.send(templateFiles);
+app.get('/rest/project/:id', function (req, res) {
+  var response = {
+    projectTitle: 'Title',
+    projectAuthor: 'Author',
+    projectMediaUrl: 'https://placekitten.com/g/200/300',
+    participants: ['Developer', 'Creator'],
+    categories: ['Lifestyle', 'Social'],
+    postedOn: new Date(),
+    comments: [
+      {
+        author: 'Mike',
+        text: 'I am curious about this project',
+        title: '',
+        date: new Date()
+      },
+      {
+        author: 'Nick',
+        text: 'i think nothing',
+        title: '',
+        date: new Date()
+      },
+      {
+        author: 'John',
+        text: 'It is wonderful',
+        title: '',
+        date: new Date()
+      }
+    ]
+  };
+
+  res.send(response);
 
 });
 
 app.listen(port, function () {
   console.log("Running at Port " + port);
 });
-
 
 function readTemplates(dir) {
   console.log('reading templates');
