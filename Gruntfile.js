@@ -79,6 +79,12 @@ module.exports = function (grunt) {
         cwd: 'node_modules/angular-route',
         src: ['angular-route.js'],
         dest: 'target/js/lib'
+      },
+      angular_resource: {
+        expand: true,
+        cwd: 'node_modules/angular-resource',
+        src: ['angular-resource.js'],
+        dest: 'target/js/lib'
       }
     }
   });
