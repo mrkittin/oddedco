@@ -4,15 +4,17 @@
   <meta charset="UTF-8">
   <title>CTW</title>
   <link rel="stylesheet" href="css/style.css"/>
-    <script src="js/lib/dot.js"></script>
-    <script src="js/lib/jquery.js"></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script src="js/lib/dot.js"></script>
+  <script src="js/lib/jquery.js"></script>
   <script src="js/lib/bootstrap.js"></script>
   <script src="js/lib/angular.js"></script>
   <script src="js/lib/angular-route.js"></script>
-    <script src="js/startup.js"></script>
-    <script src="js/controllers/LandingController.js"></script>
+  <script src="js/startup.js"></script>
+  <script src="js/controllers/LandingController.js"></script>
   <script src="js/controllers/ProjectController.js"></script>
   <script src="js/controllers/ProjectListController.js"></script>
+  <script src="js/controllers/AboutController.js"></script>
 </head>
 <body>
   <script>
@@ -35,39 +37,38 @@
  }(document, 'script', 'facebook-jssdk'));
   </script>
 
-
-  <div ng-app="ctw">
-
-      <header>
-          <nav class="navbar navbar-default">
-              <div class="container">
-                  <div class="navbar-header">
-                      <a class="navbar-brand" href="/">Change the world</a>
-                  </div>
-
-                  <ul class="nav navbar-nav navbar-right">
-                      <li><a href="/projects"><i class="fa fa-shield"></i> Projects</a></li>
-                      <li><a href="/project/1"><i class="fa fa-comment"></i> First Project</a></li>
-                      <li><a href="/contact"><i class="fa fa-comment"></i> Contact</a></li>
-                  </ul>
-              </div>
-          </nav>
+  <div class="container">
+    <div ng-app="ctw">
+      <header ng-show="showHeader">
+        <nav class="navbar navbar-default navbar-static-top">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">Change the world</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/projects"><i class="fa fa-shield"></i> Projects</a></li>
+              <li><a href="/project/1"><i class="fa fa-comment"></i> First Project</a></li>
+              <li><a href="/about"><i class="fa fa-comment"></i> About Us</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a><div class="fb-login-button pull-right" data-max-rows="1" data-size="medium" data-auto-logout-link="true"></div></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </header>
 
       <div ng-view></div>
 
-      <footer>
-          <nav class="navbar navbar-default">
-              <div class="container">
-                  <ul class="nav navbar-nav navbar-right">
-                      <li><a href="/projects"><i class="fa fa-shield"></i> Projects</a></li>
-                      <li><a href="/project/1"><i class="fa fa-comment"></i> First Project</a></li>
-                      <li><a href="/contact"><i class="fa fa-comment"></i> Contact</a></li>
-                  </ul>
-              </div>
-          </nav>
+      <footer ng-show="showFooter">
+        <nav class="navbar navbar-default">
+          <ul class="nav navbar-nav">
+            <li><a href="/about"><i class="fa fa-comment"></i> About Us</a></li>
+          </ul>
+        </nav>
       </footer>
-  </div>
+    </div>
+  </div>  
 
 </body>
 </html>

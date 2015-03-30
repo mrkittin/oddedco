@@ -1,4 +1,6 @@
-angular.module("ctw").controller("ProjectController", function($scope, $resource) {
+angular.module("ctw").controller("ProjectController", function($scope) {
+  $scope.$root.showHeader = true;
+  $scope.$root.showFooter = true;
   var response = {
     projectTitle: 'Title',
     projectAuthor: 'Author',
@@ -27,6 +29,5 @@ angular.module("ctw").controller("ProjectController", function($scope, $resource
       }
     ]
   };
-
   $scope.data = response;
 });
