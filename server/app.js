@@ -12,12 +12,87 @@ app.get('/', function (req, res) {
 var port = 3003;
 app.use(serveStatic('target/', {'index': 'index.html'}));
 
-var templateFiles = [];
-var baseTemplatesPath = __dirname + '/templates';
-readTemplates(baseTemplatesPath);
+app.get('/rest/project/:id', function (req, res) {
+  var response = {
+    id: 32452345,
+    projectTitle: 'Title',
+    projectAuthor: 'Author',
+    projectMediaUrl: 'https://placekitten.com/g/200/300',
+    participants: ['Developer', 'Creator'],
+    categories: ['Lifestyle', 'Social'],
+    shortDescription: 'Some short Description',
+    longDescription: 'Some long description, Some long description, Some long description',
+    postedOn: new Date(),
+    comments: [
+      {
+        author: 'Mike',
+        text: 'I am curious about this project',
+        title: '',
+        date: new Date()
+      },
+      {
+        author: 'Nick',
+        text: 'i think nothing',
+        title: '',
+        date: new Date()
+      },
+      {
+        author: 'John',
+        text: 'It is wonderful',
+        title: '',
+        date: new Date()
+      }
+    ]
+  };
 
-app.get('/rest/templates', function (req, res) {
-  res.send(templateFiles);
+  res.send(response);
+
+});
+
+app.get('/rest/projects', function (req, res) {
+  var sampleProject = {
+    id: 32452345,
+    projectTitle: 'Title',
+    projectAuthor: 'Author',
+    projectMediaUrl: 'https://placekitten.com/g/200/300',
+    participants: ['Developer', 'Creator'],
+    categories: ['Lifestyle', 'Social'],
+    shortDescription: 'Some short Description',
+    longDescription: 'Some long description, Some long description, Some long description',
+    postedOn: new Date(),
+    comments: [
+      {
+        author: 'Mike',
+        text: 'I am curious about this project',
+        title: '',
+        date: new Date()
+      },
+      {
+        author: 'Nick',
+        text: 'i think nothing',
+        title: '',
+        date: new Date()
+      },
+      {
+        author: 'John',
+        text: 'It is wonderful',
+        title: '',
+        date: new Date()
+      }
+    ]
+  };
+
+  var projectList = [];
+  for (var i = 0; i < 20; i++) {
+    var projectClone = {};
+    for (var prop in sampleProject) {
+      projectClone[prop] = sampleProject[prop];
+    }
+    projectList.push(projectClone);
+  }
+  res.send({
+    projects: projectList
+  });
 
 });
 
@@ -25,26 +100,3 @@ app.listen(port, function () {
   console.log("Running at Port " + port);
 });
 
-
-function readTemplates(dir) {
-  console.log('reading templates');
-  var nodeDir = require('node-dir');
-  nodeDir.files(dir, function (err, files) {
-    if (err) throw err;
-    files.forEach(function (file) {
-      var fileName = path.basename(file);
-      var dir = path.dirname(path.normalize(file));
-      dir = dir.replace(baseTemplatesPath + '/', '');
-      fs.readFile(file, 'utf8', function (err, data) {
-        if (err) {
-          return console.log(err);
-        }
-        templateFiles.push({
-          name: dir + '/' + fileName,
-          data: data
-        });
-      });
-    });
-
-  });
-}

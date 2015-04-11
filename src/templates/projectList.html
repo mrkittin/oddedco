@@ -1,12 +1,16 @@
 <div>
-    Project List Page
-    <div>{{message}}</div>
+    <div>
+        <div ng-repeat="project in data.projects">
 
-    <div class="panel">
-        <div class="panel-heading">Hello world
-            <div class="fb-login-button pull-right" data-max-rows="1" data-size="medium" data-auto-logout-link="true"></div>
+            <div class="projec_list_item">
+                <div class="projec_list_item-logo">
+                    <img src="{{project.projectMediaUrl}}" alt=""/>
+                </div>
+                <p>{{project.shortDescription}}</p>
+                <p><span>Comments: {{project.comments.length}}</span><a href="/project/{{project.id}}">More-></a></p>
+            </div>
+
+
         </div>
-
-        <div class="panel-body">We will change the world</div>
     </div>
 </div>
