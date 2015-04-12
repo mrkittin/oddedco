@@ -1,16 +1,28 @@
-<div>
-    <div>
-        <div ng-repeat="project in data.projects">
-
-            <div class="projec_list_item">
-                <div class="projec_list_item-logo">
-                    <img src="{{project.projectMediaUrl}}" alt=""/>
-                </div>
-                <p>{{project.shortDescription}}</p>
-                <p><span>Comments: {{project.comments.length}}</span><a href="/project/{{project.id}}">More-></a></p>
+<div class="panel panel-default" style="border: 0">
+  <div class="panel-body">
+    <span ng-repeat="category in categories.categories">
+      <a href="#" class="btn btn-md btn-hover btn-default">{{category}}</a>  
+    </span>
+  </div>
+</div>
+<div class="row clearfix">
+  <div ng-repeat="project in data.projects">
+    <div class="col-xs-4 col-md-3">
+      <div class="thumbnail">
+        <img src="{{project.projectMediaUrl}}" alt="logo">
+        <div class="caption">
+          <h3>{{project.projectTitle}}</h3>
+          <p>{{project.shortDescription}}</p>
+          <div class="row clearfix">
+            <div class="col-md-6">
+              <span style="white-space: nowrap;">Comments: {{project.comments.length}}</span>
             </div>
-
-
+            <div class="col-md-6">
+              <a href="/project/{{project.id}}">More <i class="fa fa-chevron-right"></i></a>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>

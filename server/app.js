@@ -17,7 +17,7 @@ app.get('/rest/project/:id', function (req, res) {
     id: 32452345,
     projectTitle: 'Title',
     projectAuthor: 'Author',
-    projectMediaUrl: 'https://placekitten.com/g/200/300',
+    projectMediaUrl: 'https://placekitten.com/g/300/200',
     participants: ['Developer', 'Creator'],
     categories: ['Lifestyle', 'Social'],
     shortDescription: 'Some short Description',
@@ -52,13 +52,13 @@ app.get('/rest/project/:id', function (req, res) {
 app.get('/rest/projects', function (req, res) {
   var sampleProject = {
     id: 32452345,
-    projectTitle: 'Title',
+    projectTitle: 'Project Title',
     projectAuthor: 'Author',
-    projectMediaUrl: 'https://placekitten.com/g/200/300',
+    projectMediaUrl: 'https://placekitten.com/g/300/200',
     participants: ['Developer', 'Creator'],
     categories: ['Lifestyle', 'Social'],
-    shortDescription: 'Some short Description',
-    longDescription: 'Some long description, Some long description, Some long description',
+    shortDescription: 'Some short Description Some short Description Some short Description Some short Description',
+    longDescription: 'Some long description, Some long description, Some long description Some long description, Some long description, Some long description',
     postedOn: new Date(),
     comments: [
       {
@@ -94,6 +94,12 @@ app.get('/rest/projects', function (req, res) {
     projects: projectList
   });
 
+});
+
+app.get('/rest/categories', function (req, res) {
+  res.send({
+    categories: ['Lifestyle', 'Social', 'Transportation', 'Healthcare', 'Money', 'Share-based economy', 'Personal development', 'Global trends', 'Explore the world']
+  });
 });
 
 app.listen(port, function () {
