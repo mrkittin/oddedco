@@ -1,5 +1,4 @@
 var express = require('../node_modules/express');
-var serveStatic = require('../node_modules/serve-static');
 var path = require('../node_modules/path');
 var fs = require('fs');
 
@@ -10,7 +9,7 @@ app.get('/', function (req, res) {
 });
 
 var port = 3003;
-app.use(serveStatic('target/', {'index': 'index.html'}));
+app.use(express.static('target/'));
 
 app.get('/rest/project/:id', function (req, res) {
   var response = {
@@ -98,7 +97,8 @@ app.get('/rest/projects', function (req, res) {
 
 app.get('/rest/categories', function (req, res) {
   res.send({
-    categories: ['Lifestyle', 'Social', 'Transportation', 'Healthcare', 'Money', 'Share-based economy', 'Personal development', 'Global trends', 'Explore the world']
+    categories: ['Lifestyle', 'Social', 'Transportation', 'Healthcare', 'Money',
+        'Share-based economy', 'Personal development', 'Global trends', 'Explore the world']
   });
 });
 
