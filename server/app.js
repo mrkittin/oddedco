@@ -3,13 +3,11 @@ var path = require('../node_modules/path');
 var fs = require('fs');
 
 var app = express();
+var port = 3003;
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
-
-var port = 3003;
-app.use(express.static('target/'));
 
 app.get('/rest/project/:id', function (req, res) {
   var response = {
@@ -100,6 +98,12 @@ app.get('/rest/categories', function (req, res) {
     categories: ['Lifestyle', 'Social', 'Transportation', 'Healthcare', 'Money',
         'Share-based economy', 'Personal development', 'Global trends', 'Explore the world']
   });
+});
+
+app.use(express.static('target/'));
+
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 app.listen(port, function () {
