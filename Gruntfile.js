@@ -65,7 +65,7 @@ module.exports = function (grunt) {
       dot: {
         expand: true,
         cwd: 'node_modules/dot',
-        src: ['dot.js'],
+        src: ['doT.js'],
         dest: 'target/js/lib'
       },
       angular: {
