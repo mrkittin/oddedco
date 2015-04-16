@@ -85,6 +85,18 @@ module.exports = function (grunt) {
         cwd: 'node_modules/angular-resource',
         src: ['angular-resource.js'],
         dest: 'target/js/lib'
+      },
+      angular_carousel: {
+        expand: true,
+        cwd: 'node_modules/angular-carousel/dist/',
+        src: ['angular-carousel.js'],
+        dest: 'target/js/lib'
+      },
+      angular_touch: {
+        expand: true,
+        cwd: 'node_modules/angular-touch/',
+        src: ['angular-touch.js'],
+        dest: 'target/js/lib'
       }
     }
   });

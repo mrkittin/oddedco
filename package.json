@@ -19,7 +19,9 @@
     "node-dir": "latest",
     "angular": "1.3.15",
     "angular-route": "^1.3.0",
-    "angular-resource": "latest"
+    "angular-resource": "latest",
+    "angular-carousel": "latest",
+    "angular-touch": "latest"
   },
   "scripts": {
     "test": "grunt test"

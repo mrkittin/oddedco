@@ -1,4 +1,4 @@
-angular.module("ctw", ['ngRoute', 'ngResource']).config(['$routeProvider', '$locationProvider',
+angular.module("ctw", ['ngRoute', 'ngResource', 'angular-carousel']).config(['$routeProvider', '$locationProvider',
   function($routeProvider, $locationProvider) {
     $routeProvider.
       when('/', {

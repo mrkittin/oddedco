@@ -100,6 +100,11 @@ app.get('/rest/categories', function (req, res) {
   });
 });
 
+app.get('/rest/landing-images', function (req, res) {
+  var files = fs.readdirSync(path.join(__dirname + '/img/rnd/'));
+  res.send(files);
+});
+
 app.use(express.static('target/'));
 
 app.get('*', function (req, res) {
