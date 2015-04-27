@@ -19,7 +19,7 @@
   <script src="/js/controllers/ProjectListController.js"></script>
   <script src="/js/controllers/AboutController.js"></script>
 </head>
-<body>
+<body style="background-color: rgb(237,237, 228);">
   <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -40,7 +40,7 @@
  }(document, 'script', 'facebook-jssdk'));
   </script>
 
-  <div ng-app="ctw">
+  <div ng-app="ctw" class="main-div">
     <div ng-class="containerType">
       <header ng-show="showHeader">
         <nav class="navbar navbar-default navbar-static-top">
@@ -63,17 +63,17 @@
 
       <div ng-view></div>
 
-      <footer ng-show="showFooter" class="gray-color">
+      <footer ng-show="showFooter">
 
         <div class="row clearfix">
          <div class="col-md-2 column vcenter">
-            <img alt="change the world" src="img/logo-cap.svg" width="30px">
+            <img alt="change the world" src="img/logo1.svg" width="30px">
           </div><!--
-      --><div class="col-md-1 column vcenter">
+      --><div class="col-md-2 column vcenter" style="text-align:center;">
             <a href="/about" class="default-color"><i class="fa fa-comment"></i> About Us</a>
           </div><!--
-      --><div class="col-md-7 column vcenter">
-          <form class="form-inline text-center">
+      --><div class="col-md-6 column vcenter">
+          <form class="form-inline text-center" style="text-align:left;">
             <div class="form-group">
               <input type="text" class="form-control" id="exampleInputName2" placeholder="name">
             </div>

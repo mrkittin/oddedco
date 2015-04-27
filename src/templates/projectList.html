@@ -1,6 +1,6 @@
 <div class="container">
   <div class="panel panel-default" style="border: 0">
-    <div class="panel-body">
+    <div class="panel-body creamy-color">
       <span ng-repeat="category in categories.categories">
         <a href="#" class="btn btn-md btn-hover btn-default">{{category}}</a>  
       </span>
@@ -12,11 +12,11 @@
         <div class="thumbnail">
           <img ng-src="{{project.projectMediaUrl}}" alt="logo">
           <div class="caption">
-            <h3>{{project.projectTitle}}</h3>
-            <p>{{project.shortDescription}}</p>
+            <h3 class="black-color">{{project.projectTitle}}</h3>
+            <p class="black-color">{{project.shortDescription}}</p>
             <div class="row clearfix">
               <div class="col-md-6">
-                <span style="white-space: nowrap;">Comments: {{project.comments.length}}</span>
+                <span style="white-space: nowrap;" class="black-color">Comments: {{project.comments.length}}</span>
               </div>
               <div class="col-md-6">
                 <a href="/project/{{project.id}}">More <i class="fa fa-chevron-right"></i></a>
