@@ -3,7 +3,7 @@ var path = require('../node_modules/path');
 var fs = require('fs');
 
 var app = express();
-var port = 3003;
+var port = process.env.PORT || 3003;
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
