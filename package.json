@@ -24,7 +24,8 @@
     "angular-touch": "latest"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "postinstall": "grunt init"
   },
   "repository": {
     "type": "git",
