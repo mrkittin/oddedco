@@ -42,24 +42,19 @@
 
   <div ng-app="ctw" class="main-div">
     <div ng-class="containerType">
-      <header ng-show="showHeader">
-        <nav class="navbar navbar-default navbar-static-top">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="/">Change the world</a>
-          </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="/projects"><i class="fa fa-shield"></i> Projects</a></li>
-              <li><a href="/project/1"><i class="fa fa-comment"></i> First Project</a></li>
-              <li><a href="/about"><i class="fa fa-comment"></i> About Us</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a><div class="fb-login-button pull-right" data-max-rows="1" data-size="medium" data-auto-logout-link="true"></div></a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+      <header ng-show="showHeader" style="margin-bottom:20px;">
+        <div class="col-md-8 column vcenter">
+          <a href="/new" class="default-color header-option"><i class="fa fa-plus"></i> Add a project</a>
+          <a href="/projects" class="default-color header-option"><i class="fa fa-bars"></i> Projects</a>
+          <a href="/project/1" class="default-color header-option"><i class="fa fa-bolt"></i> First project</a>
+          <a href="/manifesto" class="default-color header-option"><i class="fa fa-book"></i> Manifesto</a>
+          <a href="/manifesto" class="default-color header-option"><i class="fa fa-pencil-square-o"></i> Blog</a>
+        </div><!--
+      --><div class="col-md-4 column vcenter">
+            <a><div class="fb-login-button pull-right" data-max-rows="1" data-size="medium" data-auto-logout-link="true"></div></a>
+         </div>
+      
+    </header>
 
       <div ng-view></div>
 
@@ -67,7 +62,9 @@
 
         <div class="row clearfix">
          <div class="col-md-2 column vcenter">
-            <img alt="change the world" src="img/logo1.svg" width="30px">
+            <a href="/">
+              <img alt="change the world" src="img/logo1.svg" width="30px">
+            </a>
           </div><!--
       --><div class="col-md-2 column vcenter" style="text-align:center;">
             <a href="/about" class="default-color"><i class="fa fa-comment"></i> About Us</a>
@@ -86,9 +83,9 @@
           </form>
           </div><!--
           --><div class="col-md-2 column vcenter footer-right-text">
-              <a href="/about" class="default-color"><i class="fa fa-facebook-official"></i> Facebook</a><br>
-              <a href="/about" class="default-color"><i class="fa fa-twitter"></i> Twitter</a><br>
-              <a href="/about" class="default-color"><i class="fa fa-pencil-square-o"></i> Blog</a><br>
+              <a target="_new" href="https://www.facebook.com/pages/ODDED/1193256387367299" class="default-color"><i class="fa fa-facebook-official"></i> Facebook</a><br>
+              <a target="_new" href="https://twitter.com/" class="default-color"><i class="fa fa-twitter"></i> Twitter</a><br>
+              <a href="/blog" class="default-color"><i class="fa fa-pencil-square-o"></i> Blog</a><br>
               <a href="/about" class="default-color"><i class="fa fa-info"></i> Volunteermatch</a>
             </div>
           </div>
