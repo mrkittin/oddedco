@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
-  <title>CTW</title>
+  <title>odded</title>
   <link rel="stylesheet" href="/css/style.css"/>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script src="/js/lib/doT.js"></script>
@@ -63,13 +63,16 @@
 
       <div ng-view></div>
 
-      <footer ng-show="showFooter">
+      <footer ng-show="showFooter" class="gray-color">
 
         <div class="row clearfix">
-          <div class="col-md-2 column vcenter">
+         <div class="col-md-2 column vcenter">
             <img alt="change the world" src="img/logo-cap.svg" width="30px">
           </div><!--
-      --><div class="col-md-8 column vcenter">
+      --><div class="col-md-1 column vcenter">
+            <a href="/about" class="default-color"><i class="fa fa-comment"></i> About Us</a>
+          </div><!--
+      --><div class="col-md-7 column vcenter">
           <form class="form-inline text-center">
             <div class="form-group">
               <input type="text" class="form-control" id="exampleInputName2" placeholder="name">
@@ -82,8 +85,11 @@
             </span>
           </form>
           </div><!--
-          --><div class="col-md-2 column vcenter">
-              <img alt="money power" src="img/moneypower.svg">
+          --><div class="col-md-2 column vcenter footer-right-text">
+              <a href="/about" class="default-color"><i class="fa fa-facebook-official"></i> Facebook</a><br>
+              <a href="/about" class="default-color"><i class="fa fa-twitter"></i> Twitter</a><br>
+              <a href="/about" class="default-color"><i class="fa fa-pencil-square-o"></i> Blog</a><br>
+              <a href="/about" class="default-color"><i class="fa fa-info"></i> Volunteermatch</a>
             </div>
           </div>
       </footer>
