@@ -22,11 +22,11 @@ folder "target" is the folder of built project
 
 ##Vendor frameworks
 
-Template engine
-https://github.com/olado/doT
+Framework
+https://angularjs.org/
 
 CSS, styling
 http://getbootstrap.com
 
-JQuery
-http://api.jquery.com/
+Server web application framework
+http://expressjs.com/
