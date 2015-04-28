@@ -17,6 +17,10 @@ angular.module("ctw", ['ngRoute', 'ngResource', 'angular-carousel']).config(['$r
         templateUrl: '/templates/about.html',
         controller: 'AboutController'
       }).
+      when('/manifesto', {
+        templateUrl: '/templates/manifesto.html',
+        controller: 'ManifestoController'
+      }).
       otherwise({
         redirectTo: '/'
       });
