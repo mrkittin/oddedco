@@ -19,7 +19,7 @@
   <script src="/js/controllers/ProjectListController.js"></script>
   <script src="/js/controllers/AboutController.js"></script>
 </head>
-<body style="background-color: rgb(237,237, 228);">
+<body class="gotham-font-reg" style="background-color: rgb(237,237, 228);">
   <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -43,7 +43,7 @@
   <div ng-app="ctw" class="main-div">
     <div ng-class="containerType">
       <div class="container">
-      <header ng-show="showHeader" style="margin-top:20px;margin-bottom:72px;">
+      <header ng-show="showHeader" style="margin-top:20px;margin-bottom:50px;">
         <div class="col-md-10 column vcenter">
           <a href="/new" class="default-color header-option"><i class="fa fa-plus"></i> Add a project</a>
           <a href="/projects" class="default-color header-option"><i class="fa fa-bars"></i> Projects</a>
@@ -74,10 +74,10 @@
       --><div class="col-md-6 column vcenter">
           <form class="form-inline text-center" style="text-align:left;">
             <div class="form-group">
-              <input type="text" class="form-control" id="exampleInputName2" placeholder="name">
+              <input type="text" class="form-control remove-border-radius" id="exampleInputName2" placeholder="name">
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" id="exampleInputEmail2" placeholder="email">
+              <input type="email" class="form-control remove-border-radius" id="exampleInputEmail2" placeholder="email">
             </div>
             <span>
               <button type="submit" class="btn btn-primary">Subscribe</button>  

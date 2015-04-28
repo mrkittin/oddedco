@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="panel panel-default" style="border: 0">
+  <div class="panel panel-default remove-shadow" style="border: 0">
     <div class="panel-body creamy-color" style="text-align: center;">
       <span ng-repeat="category in categories.categories">
         <a href="#" class="btn btn-md btn-hover btn-default creamy-color black-border" style="border-width:4px; margin-top:3px; margin-bottom:3px; border-radius:1px;">{{category}}</a>  
@@ -9,10 +9,10 @@
   <div class="row clearfix">
     <div ng-repeat="project in data.projects">
       <div class="col-xs-4 col-md-3">
-        <div class="thumbnail">
+        <div class="thumbnail remove-border-radius creamy-color remove-border">
           <img ng-src="{{project.projectMediaUrl}}" alt="logo">
           <div class="caption">
-            <h3 class="black-color">{{project.projectTitle}}</h3>
+            <h3 class="black-color gotham-font-bold">{{project.projectTitle}}</h3>
             <p class="black-color">{{project.shortDescription}}</p>
             <div class="row clearfix">
               <div class="col-md-6">
