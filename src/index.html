@@ -42,23 +42,25 @@
 
   <div ng-app="ctw" class="main-div">
     <div ng-class="containerType">
-      <header ng-show="showHeader" style="margin-bottom:20px;">
-        <div class="col-md-8 column vcenter">
+      <div class="container">
+      <header ng-show="showHeader" style="margin-top:20px;margin-bottom:72px;">
+        <div class="col-md-10 column vcenter">
           <a href="/new" class="default-color header-option"><i class="fa fa-plus"></i> Add a project</a>
           <a href="/projects" class="default-color header-option"><i class="fa fa-bars"></i> Projects</a>
-          <a href="/project/1" class="default-color header-option"><i class="fa fa-bolt"></i> First project</a>
+          <a href="/about" class="default-color header-option"><i class="fa fa-info"></i> About us</a>
           <a href="/manifesto" class="default-color header-option"><i class="fa fa-book"></i> Manifesto</a>
-          <a href="/manifesto" class="default-color header-option"><i class="fa fa-pencil-square-o"></i> Blog</a>
+          <a href="/blog" class="default-color header-option"><i class="fa fa-pencil-square-o"></i> Blog</a>
         </div><!--
-      --><div class="col-md-4 column vcenter">
+      --><div class="col-md-2 column vcenter">
             <a><div class="fb-login-button pull-right" data-max-rows="1" data-size="medium" data-auto-logout-link="true"></div></a>
          </div>
       
     </header>
+    </div>
 
       <div ng-view></div>
-
-      <footer ng-show="showFooter">
+      <div class="container">
+      <footer ng-show="showFooter" style="padding-top: 20px;">
 
         <div class="row clearfix">
          <div class="col-md-2 column vcenter">
@@ -90,8 +92,9 @@
             </div>
           </div>
       </footer>
+      </div>
     </div>
-  </div>  <!-- TODO fix footer, make it close to template -->
+  </div>
 
 </body>
 </html>
