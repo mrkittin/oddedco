@@ -5,6 +5,7 @@
 body, html {
   width: 100vw;
   margin: 0 auto;
+  font-size: 1em !important;
 }
 
 img {
@@ -29,11 +30,13 @@ img {
     font-weight: lighter; 
 }
 
-.c0{line-height:1.0;padding-top:0pt;widows:2;orphans:2;text-indent:36pt;text-align:right;direction:ltr;}
-.c3{font-size:10pt;font-style:italic;font-weight:bold}
-.c5{font-size:8pt;font-style:italic}
+.c0{line-height:1.0;padding-top:0pt;widows:2;orphans:2;text-indent:36pt;text-align:right;direction:ltr;
+max-width: 850px !important;}
+.c3{font-size:10pt;font-weight:bold}
+.c5{font-size:8pt;}
 .c6{padding-left:0pt;line-height:1.15;padding-top:10pt;widows:2;orphans:2;direction:ltr;margin-left:72pt}
-.c4{line-height:1.15;padding-top:10pt;widows:2;orphans:2;text-indent:36pt;direction:ltr;font-size:11pt;margin:0;}
+.c4{line-height:1.45;padding-top:10pt;widows:2;orphans:2;text-indent:36pt;direction:ltr;margin:0;text-align: justify;
+max-width: 850px !important;}
 .c7{margin:0;padding:0}
 
 .gotham-font-bold{
@@ -52,6 +55,10 @@ img {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.justify {
+  text-align: justify;
 }
 
 .main-div {
@@ -147,8 +154,9 @@ img {
 }
 
 .manifesto {
-  padding-left: 205px;
-  padding-right: 205px;
+  text-align: center;
+  text-align: -moz-center;
+  text-align: -webkit-center;
   padding-bottom: 50px;
 }
 
