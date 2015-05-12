@@ -68,12 +68,6 @@ module.exports = function (grunt) {
         src: ['bootstrap.js'],
         dest: 'target/js/lib'
       },
-      dot: {
-        expand: true,
-        cwd: 'node_modules/dot',
-        src: ['doT.js'],
-        dest: 'target/js/lib'
-      },
       angular: {
         expand: true,
         cwd: 'node_modules/angular',
