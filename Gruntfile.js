@@ -35,7 +35,7 @@ module.exports = function (grunt) {
       main: {
         expand: true,
         cwd: 'src/',
-        src: ['**/*.js', '**/*.html'],
+        src: ['**/*.js', '**/*.html', 'favicon.ico'],
         dest: 'target/'
       },
       images: {
