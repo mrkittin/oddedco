@@ -49,7 +49,7 @@ app.get('/rest/project/:id', function (req, res) {
 app.get('/rest/projects', function (req, res) {
   var sampleProject = {
     id: 32452345,
-    projectTitle: 'Project Title',
+    projectTitle: 'Super cool project',
     projectAuthor: 'Author',
     projectMediaUrl: 'http://placehold.it/300x200',
     participants: ['Developer', 'Creator'],
@@ -80,7 +80,7 @@ app.get('/rest/projects', function (req, res) {
   };
 
   var projectList = [];
-  for (var i = 0; i < 20; i++) {
+  for (var i = 0; i < 10; i++) {
     var projectClone = {};
     for (var prop in sampleProject) {
       projectClone[prop] = sampleProject[prop];

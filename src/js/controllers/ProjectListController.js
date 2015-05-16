@@ -10,4 +10,8 @@ angular.module("ctw").controller("ProjectListController", function($scope, $reso
   categoriesResource.get({}, function (response) {
     $scope.categories = response;
   });
+  $scope.bla = function (id) {
+    console.log(id);
+    $location.path("/projects");
+  }
 });
