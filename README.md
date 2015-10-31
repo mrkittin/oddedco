@@ -20,9 +20,9 @@ grunt init
 folder "target" is the folder of built project
 
 
-##Vendor frameworks
+##Frameworks
 
-Framework
+Angular
 https://angularjs.org/
 
 CSS, styling
