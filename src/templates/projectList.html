@@ -1,12 +1,12 @@
 <div class="container-fluid">
-  <div class="panel panel-default remove-shadow" style="border: 0">
+  <div ng-show="showCategories" class="panel panel-default remove-shadow" style="border: 0">
     <div class="panel-body creamy-color" style="text-align: center;">
       <span ng-repeat="category in categories.categories">
         <a href="#" class="btn btn-md btn-hover btn-default creamy-color black-border uppercase" style="border-width:4px; margin-top:3px; margin-bottom:3px; border-radius:1px;">{{category}}</a>  
       </span>
     </div>
   </div>
-  <div class="row clearfix">
+  <div ng-show="showTopProjects" class="row clearfix">
     <div ng-repeat="project in data.projects">
       <div class="col-xs-12 col-md-3">
         <div class="thumbnail remove-border-radius creamy-color remove-border">
@@ -19,36 +19,12 @@
                 <span style="white-space: nowrap;" class="black-color">Comments: {{project.comments.length}}</span>
               </div>
               <div class="col-md-6">
-                <!-- href="/project/{{project.id}}" -->
-                <a data-toggle="modal" data-target="#myModal" class="cursor-poiner">More <i class="fa fa-chevron-right"></i></a>
+                <a href="/project/{{project.id}}">More <i class="fa fa-chevron-right"></i></a>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Project Details Modal -->
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">{{project.projectTitle}}</h4>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-              <!-- <a data-dismiss="modal" ng-click="javascript:window.location='/project/{{project.id}}'">go to full project page</a> -->
-              <a data-dismiss="modal" ng-click="bla(project.id);">go to full project page</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </div>
-

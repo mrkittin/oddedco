@@ -93,6 +93,53 @@ app.get('/rest/projects', function (req, res) {
 
 });
 
+app.get('/rest/top-projects', function (req, res) {
+  var sampleProject = {
+    id: 32452345,
+    projectTitle: 'Super cool project',
+    projectAuthor: 'Author',
+    projectMediaUrl: 'http://placehold.it/300x200',
+    participants: ['Developer', 'Creator'],
+    categories: ['Lifestyle', 'Social'],
+    shortDescription: 'Some short Description Some short Description Some short Description Some short Description',
+    longDescription: 'Some long description, Some long description, Some long description Some long description, Some long description, Some long description',
+    postedOn: new Date(),
+    comments: [
+      {
+        author: 'Mike',
+        text: 'I am curious about this project',
+        title: '',
+        date: new Date()
+      },
+      {
+        author: 'Nick',
+        text: 'i think nothing',
+        title: '',
+        date: new Date()
+      },
+      {
+        author: 'John',
+        text: 'It is wonderful',
+        title: '',
+        date: new Date()
+      }
+    ]
+  };
+
+  var projectList = [];
+  for (var i = 0; i < 4; i++) {
+    var projectClone = {};
+    for (var prop in sampleProject) {
+      projectClone[prop] = sampleProject[prop];
+    }
+    projectList.push(projectClone);
+  }
+  res.send({
+    projects: projectList
+  });
+
+});
+
 app.get('/rest/categories', function (req, res) {
   res.send({
     categories: ['Lifestyle', 'Social', 'Transportation', 'Healthcare', 'Money',

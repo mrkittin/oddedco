@@ -67,7 +67,7 @@ ol.mine {
 .main-div {
   margin-top: 10px;
   margin-bottom: 30px;
-  background-color: rgb(237,237, 228);
+  background-color: rgb(255,255, 255);
 }
 
 .remove-border-radius{
@@ -137,7 +137,7 @@ ol.mine {
 }
 
 .creamy-color {
-  background-color: rgb(237,237, 228);
+  background-color: rgb(255,255,255);
 }
 
 .black-color {
@@ -208,6 +208,10 @@ ol.mine {
   margin-bottom: 10px;
 }
 
+.subscribe-form {
+  float:right;
+}
+
 @media (max-width: 768px) {
   .logo {
     max-width: 160px;
@@ -262,6 +266,37 @@ ol.mine {
 
 .max-width-250 {
   max-width: 250px;
+}
+
+.headroom--top {
+  display: block;
+}
+
+.headroom--not-top {
+  display: none;
+}
+
+/*.header--fixed{
+  position:fixed;z-index:10;right:0;left:0;top:0
+}*/
+
+.animated {
+  -webkit-transition:all 1.25s linear;
+  -moz-transition:all 1.25s linear;
+  -o-transition:all 1.25s linear;
+  transition:all 1.25s linear;
+}
+
+.slideUp {
+  -webkit-transform:translateY(-100%);
+  -ms-transform:translateY(-100%);
+  transform:translateY(-100%)
+}
+
+.slideDown {
+  -webkit-transform:translateY(0);
+  -ms-transform:translateY(0);
+  transform:translateY(0)
 }
 
 @import "_landing";
