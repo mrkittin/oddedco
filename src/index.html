@@ -18,6 +18,7 @@
   <script src="/js/lib/angular-carousel.js"></script>
   <script src="/js/lib/angular-touch.js"></script>
   <script src="/js/startup.js"></script>
+  <!-- <script src="/js/fb.js"></script> -->
   <script src="/js/controllers/ProjectListLandingController.js"></script>
   <script src="/js/controllers/ProjectListController.js"></script>
   <script src="/js/controllers/ProjectController.js"></script>
@@ -25,25 +26,6 @@
   <script src="/js/controllers/MainController.js"></script>
 </head>
 <body class="gotham-font-reg" style="background-color: rgb(255,255, 255);" ng-app="ctw">
-  
-  <script>
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId      : '806856096063995',
-        xfbml      : true,
-        cookie     : true,
-        version    : 'v2.2'
-      });
-    };
-
-    (function(d, s, id){
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {return;}
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-  </script>
 
   <div class="main-div" ng-controller="MainCtrl">
     <div ng-class="containerType" class="remove-padding">
