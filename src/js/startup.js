@@ -2,7 +2,7 @@ angular.module("ctw", ['ngRoute', 'ngResource', 'angular-carousel']).config(['$r
   function($routeProvider, $locationProvider) {
     $routeProvider.
       when('/', {
-        templateUrl: '/templates/projectList.html',
+        template: " ",
         controller: 'ProjectListLandingController'
       }).
       when('/projects', {
