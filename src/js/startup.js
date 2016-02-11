@@ -6,7 +6,7 @@ angular.module("ctw", ['ngRoute', 'ngResource', 'angular-carousel']).config(['$r
         controller: 'ProjectListLandingController'
       }).
       when('/projects', {
-        templateUrl: '/templates/projectList.html',
+        templateUrl: '/templates/projectsStatic.html',
         controller: 'ProjectListController'
       }).
       when('/project/:projectId', {
