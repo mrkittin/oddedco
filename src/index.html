@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="ctw">
 <head lang="en">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no">
@@ -7,7 +7,7 @@
   <meta name="keywords" content="environment, protection, startup, non-profit, project, community, global, education, art, design, technology, innovation, politics, evolution, society, tech, sharing, economy, consumption, recycle" />
   <meta name="robots" content="index, follow">
   <!-- startup, project, innovation -->
-  <title>ODDED</title>
+  <title ng-bind="title"></title>
   <link rel="stylesheet" href="/css/style.css"/>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <script src="/js/lib/jquery.js"></script>
@@ -25,7 +25,7 @@
   <script src="/js/controllers/ManifestoController.js"></script>
   <script src="/js/controllers/MainController.js"></script>
 </head>
-<body class="gotham-font-reg" style="background-color: rgb(255,255, 255);" ng-app="ctw">
+<body class="gotham-font-reg" style="background-color: rgb(255,255, 255);">
 
   <div class="main-div" ng-controller="MainCtrl">
     <div ng-class="containerType" class="remove-padding">
@@ -74,7 +74,7 @@
             <div class="vcenter gotham-font-light">
               <div class="projects-link">
                 <div style="height:20px;">
-                  <a class="default-color" href="projects">PROJECTS</a>  
+                  <a ng-attr-title="{{title}}" class="default-color" href="projects">PROJECTS</a>  
                 </div>
                 
               </div>

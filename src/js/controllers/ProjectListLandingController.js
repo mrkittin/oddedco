@@ -4,6 +4,7 @@ angular.module("ctw").controller("ProjectListLandingController", function($scope
   $scope.$root.showCategories = false;
   $scope.$root.showTopProjects = false;
   $scope.$root.containerType = "container-fluid";
+  $scope.$root.title = "ODDED";
   // var projectResource = $resource('/rest/top-projects');
   // projectResource.get({}, function (response) {
   //   $scope.data = response;
