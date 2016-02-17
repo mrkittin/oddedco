@@ -380,7 +380,16 @@ ol.mine {
 
 .projects-static {
   line-height: 1.0em;
-  max-width: 912px;
+  /*max-width: 912px;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project {
+  max-width: 756px;
+  min-width: 300px;
 }
 
 .projects-static p {
@@ -388,7 +397,8 @@ ol.mine {
 }
 
 .projects-thumb {
-  margin-right: 40%;
+  margin-right: auto;
+  margin-left: auto;
   max-width: 400px;
 }
 
